@@ -1,0 +1,137 @@
+$bg: #1D1C23
+$bgm: #062659
+$bgd: #041A3E
+$main: #EEE
+$purplish: #DB8EDA
+$bgl: #073175
+$bluew: #5E85C3
+$pink: #DD8EDA
+$blue: #42A3F9
+
+$grad:  linear-gradient(225deg, $pink -11%, $blue 100%)
+$gradl:  linear-gradient(225deg, $pink -30%, $blue 100%)
+
+$xxl: 58px
+$xl: 34px
+$l: 22px
+$m: 16px
+$s: 14px
+$xs: 11px
+
+
+$tt: 0.25s
+
+$main-font: 'Avenir next', 'Roboto', 'Montserrat-Regular', 'Gotham', 'open sans', 'Lato', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+body 
+  background: $bgd
+  font-family: $main-font
+  color: $main
+  margin: 0
+  padding: 0
+  
+.App-header 
+  height: 100px
+  padding: 20px
+  color: white
+  display: flex
+  justify-content: center
+  align-items: center
+  
+.App-title 
+  font-size: 1.5em
+  text-align: center
+  font-size: 24px
+  font-weight: 300
+
+.App-container
+  width: 1100px
+  height: 700px
+  margin: 0 auto
+  //border: 1px solid rgba(#fff, 0.08)
+  background-color: $bgm
+  ::selection
+      // opacity: 0
+      background: $bgm
+  box-shadow: 0 90px 100px -50px rgba(black, 0.4) , 0 50px 70px 10px rgba(black, 0.1)
+  display: grid
+  grid-template-columns: 200px 1fr
+  grid-template-rows: auto
+  grid-template-areas: ' side-bar statistics '
+  
+  .side-bar
+    grid-area: side-bar
+    background: rgba(#000, 0.07)
+
+  .statistics 
+    grid-area:  statistics
+    display: grid
+    grid-template-columns:  50px 1fr 50px 
+    grid-template-rows: 70px  1fr 160px
+    grid-template-areas: ' . time-menu . ' ' . graph . ' ' . foot . ' 
+    .time-menu
+      grid-area: time-menu
+      background: rgba(#000, 0.01)
+      display: flex
+      justify-content: center
+      align-items: flex-end
+      div
+        margin: 10px 20px
+
+    .graph 
+      grid-area: graph
+      font-size: 80px
+      font-weight: Bolder
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-top: 70px
+      transition: all 500ms ease
+    .foot
+      grid-area: foot
+      display: flex
+      justify-content: flex-end
+      align-items: flex-start
+
+
+
+.price 
+  grid-area: foot
+  margin-top: 20px
+  width: 300px
+  height: 120px
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-template-rows: 1fr 1fr 1fr 1fr
+  grid-template-areas: ' price-main price-main currency ' ' price-main price-main price-fraction ' ' price-main price-main price-fraction ' ' delta delta delta '
+  .price-main 
+    grid-area: price-main
+    font-size: 90px
+    font-weight: 100
+    text-align: center
+  .price-fraction 
+    grid-area: price-fraction
+    font-size: 45px
+    font-weight: 100
+    // text-align: center
+    color: rgba(#fff, 0.5)
+  .currency 
+    grid-area: currency
+    // text-align: center
+    letter-spacing: 6px
+    font-weight: 200
+    padding-left: 12px
+  .delta 
+    grid-area: delta
+    // text-align: center
+    font-size: 25px
+    font-weight: 200
+    letter-spacing: 2px
+    align-self: end
+    // margin-top: 10px
+    
+
+
