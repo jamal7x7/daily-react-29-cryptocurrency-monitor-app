@@ -13,3 +13,7 @@ Roadmap:
 - [ ] Coding
 - [ ] Refinement
 - [ ] Finished
+
+---
+
+![Alt text](src/Images/daily-react-29-cryptocurrency-monitor-app.png?raw=true "App UI")
