@@ -55,7 +55,7 @@ class CryptoMonitorApp extends Component {
     // const url = 'https://api.binance.com/api/v1/ticker/24hr'
     
     console.log(url)
-    // const url2 = "https://randomuser.me/api/";
+    
     setInterval ( () => {
       
        fetch(url)
@@ -70,7 +70,7 @@ class CryptoMonitorApp extends Component {
           })
           .catch(error => { console.log('Something went wrong!!!', error) })
 
-     } ,100000)
+     } ,1000)
   }
 
  
